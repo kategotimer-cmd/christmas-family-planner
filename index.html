@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotimer Family Christmas 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0eb;
+            color: #333;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #3d5a3d 0%, #6B8B6B 100%);
+            color: #f5f0eb;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Lucida Handwriting', 'Apple Chancery', 'Snell Roundhand', cursive;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: rgba(245, 240, 235, 0.3);
+            font-size: 24px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100px) rotate(360deg); }
+        }
+
+        .top-widgets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .widget {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(107, 139, 107, 0.1);
+            text-align: center;
+            border-top: 4px solid #6B8B6B;
+        }
+
+        .widget h3 {
+            color: #3d5a3d;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #6B8B6B;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6B8B6B;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: white;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .tab:hover {
+            background: #f5f0eb;
+        }
+
+        .tab.active {
+            background: #3d5a3d;
+            color: white;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            overflow-x: auto;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-header {
+            border-bottom: 2px solid #6B8B6B;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .day-date {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3d5a3d;
+        }
+
+        .day-name {
+            color: #6B8B6B;
+            font-size: 1.1em;
+        }
+
+        .event-list {
+            margin-bottom: 15px;
+            min-height: 100px;
+        }
+
+        .event-item {
+            background: #f5f0eb;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 4px solid;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .event-item:hover {
+            transform: translateX(5px);
+        }
+
+        .event-item.flights { border-left-color: #7a9a7a; }
+        .event-item.meals { border-left-color: #6B8B6B; }
+        .event-item.activities { border-left-color: #8b9870; }
+
+        .event-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .event-time {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #3d5a3d;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2d4a2d;
+        }
+
+        .btn-secondary {
+            background: #6B8B6B;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #567056;
+        }
+
+        .btn-danger {
+            background: #8b9870;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #7a8760;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            margin: 20px;
+        }
+
+        .modal-header {
+            font-size: 1.5em;
+            color: #3d5a3d;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #6B8B6B;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .attendees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .attendee-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .attendee-checkbox input {
+            width: auto;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        .wish-list-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .wish-item {
+            background: #f5f0eb;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #7a9a7a;
+        }
+
+        .wish-item-title {
+            font-weight: bold;
+            color: #3d5a3d;
+            margin-bottom: 5px;
+        }
+
+        .wish-item-link {
+            color: #6B8B6B;
+            text-decoration: none;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .wish-item-link:hover {
+            text-decoration: underline;
+        }
+
+        .accommodations-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .night-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .night-header {
+            font-size: 1.3em;
+            color: #3d5a3d;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #6B8B6B;
+        }
+
+        .location-assignment {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .location-group {
+            background: #f5f0eb;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .location-name {
+            font-weight: bold;
+            color: #6B8B6B;
+            margin-bottom: 10px;
+        }
+
+        .group-select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-radius: 8px;
+            }
+        }
+
+        .trivia-text {
+            font-style: italic;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .add-item-form {
+            background: #f5f0eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎄 Christmas in Austin 🎄</h1>
+        <div class="snowflakes" id="snowflakes"></div>
+    </div>
+
+    <div class="top-widgets">
+        <div class="widget">
+            <h3>🎅 Countdown to Christmas</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">0</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">0</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">0</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h3>🌤️ Austin Weather</h3>
+            <a href="https://weather.com/weather/today/l/30.27,-97.74" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                <div id="weatherTemp" style="font-size: 2em; margin: 10px 0;">--°F</div>
+                <div id="weatherCondition" style="color: #666;">Loading...</div>
+                <div style="font-size: 0.9em; color: #999; margin-top: 5px; text-decoration: underline;">Click for full forecast</div>
+            </a>
+        </div>
+
+        <div class="widget">
+            <h3>🎁 Holiday Trivia</h3>
+            <div class="trivia-text" id="trivia"></div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('calendar')">📅 Calendar</button>
+        <button class="tab" onclick="switchTab('wishlists')">🎁 Wish Lists</button>
+        <button class="tab" onclick="switchTab('accommodations')">🏠 Accommodations</button>
+    </div>
+
+    <div id="calendar-tab" class="tab-content active">
+        <div class="calendar-grid" id="calendar"></div>
+    </div>
+
+    <div id="wishlists-tab" class="tab-content">
+        <div class="wish-list-section">
+            <h2 style="color: #3d5a3d; margin-bottom: 20px;">Family Wish Lists</h2>
+            <div class="form-group">
+                <label>Select Family Member:</label>
+                <select id="wishListPerson" onchange="loadWishList()">
+                    <option value="">Choose someone...</option>
+                    <option value="Kate">Kate</option>
+                    <option value="Greg">Greg</option>
+                    <option value="Lily">Lily</option>
+                    <option value="Charlie">Charlie</option>
+                    <option value="Becky">Becky</option>
+                    <option value="Evan">Evan</option>
+                    <option value="Liam">Liam</option>
+                    <option value="Stacy">Stacy</option>
+                    <option value="Bill">Bill</option>
+                    <option value="Gail">Gail</option>
+                    <option value="Bob">Bob</option>
+                </select>
+            </div>
+
+            <div id="wishListContent" style="display: none;">
+                <div style="background: #f5f0eb; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #6B8B6B;">
+                    <h3 style="color: #3d5a3d; margin-bottom: 10px; font-size: 1.1em;">👕 Clothing Sizes</h3>
+                    <div id="clothingSizeDisplay"></div>
+                    <button class="btn btn-secondary" style="margin-top: 10px; padding: 8px 16px; font-size: 0.9em;" onclick="editClothingSizes()">Edit Sizes</button>
+                </div>
+                
+                <div id="wishListItems"></div>
+
+                <div class="add-item-form">
+                    <h3 style="color: #3d5a3d; margin-bottom: 15px;">Add Gift Idea</h3>
+                    <input type="hidden" id="editGiftIndex" value="">
+                    <div class="form-group">
+                        <label>Gift Title:</label>
+                        <input type="text" id="giftTitle" placeholder="Enter gift idea">
+                    </div>
+                    <div class="form-group">
+                        <label>Link (optional):</label>
+                        <input type="url" id="giftLink" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label>Details:</label>
+                        <textarea id="giftDetails" placeholder="Any additional details..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="addGiftBtn" onclick="addGift()">Add Gift</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <div id="groupedWishLists"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="accommodations-tab" class="tab-content">
+        <div class="accommodations-grid" id="accommodations"></div>
+    </div>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalTitle">Add Event</div>
+
+            <div class="form-group">
+                <label>Event Title:</label>
+                <input type="text" id="eventTitle" placeholder="Enter event title">
+            </div>
+
+            <div class="form-group">
+                <label>Category:</label>
+                <select id="eventCategory">
+                    <option value="flights">✈️ Flights</option>
+                    <option value="meals">🍽️ Meals</option>
+                    <option value="activities">🎉 Activities</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="date" id="eventDate">
+            </div>
+
+            <div class="form-group">
+                <label>Start Time:</label>
+                <input type="time" id="eventStartTime">
+            </div>
+
+            <div class="form-group">
+                <label>End Time:</label>
+                <input type="time" id="eventEndTime">
+            </div>
+
+            <div class="form-group">
+                <label>Attendees:</label>
+                <div style="margin-bottom: 10px;">
+                    <label class="attendee-checkbox" style="font-weight: bold; color: #3d5a3d;">
+                        <input type="checkbox" id="selectAllAttendees" onchange="toggleAllAttendees(this.checked)">
+                        Select All
+                    </label>
+                </div>
+                <div class="attendees-grid" id="attendeesList">
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Kate" class="attendee-item"> Kate
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Greg" class="attendee-item"> Greg
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Lily" class="attendee-item"> Lily
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Charlie" class="attendee-item"> Charlie
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Becky" class="attendee-item"> Becky
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Evan" class="attendee-item"> Evan
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Liam" class="attendee-item"> Liam
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Stacy" class="attendee-item"> Stacy
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Bill" class="attendee-item"> Bill
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Gail" class="attendee-item"> Gail
+                    </label>
+                    <label class="attendee-checkbox">
+                        <input type="checkbox" value="Bob" class="attendee-item"> Bob
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Notes:</label>
+                <textarea id="eventNotes" placeholder="Additional details..."></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn btn-danger" id="deleteBtn" onclick="deleteEvent()" style="display: none;">Delete</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveEvent()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const familyMembers = ['Kate', 'Greg', 'Lily', 'Charlie', 'Becky', 'Evan', 'Liam', 'Stacy', 'Bill', 'Gail', 'Bob'];
+
+        let clothingSizes = {};
+
+        const triviaFacts = [
+            "The tradition of hanging stockings comes from a legend about St. Nicholas dropping gold coins down a chimney, which landed in stockings drying by the fire.",
+            "In Germany, Pickle in the Tree is a Christmas tradition where an ornament shaped like a pickle is hidden on the tree, and the first child to find it gets a special gift!",
+            "Jingle Bells was originally written for Thanksgiving, not Christmas! It was composed in 1857 by James Lord Pierpont.",
+            "The world's largest Christmas stocking measured 168 feet and 5.5 inches long and 70 feet and 9 inches wide. It was made in Italy in 2011!",
+            "In Japan, it's a popular tradition to eat KFC on Christmas Day. The tradition started in 1974 with KFC's 'Kurisumasu ni wa kentakkii!' (Kentucky for Christmas!) marketing campaign.",
+            "The first artificial Christmas tree was made in Germany using dyed goose feathers.",
+            "Christmas trees usually grow for about 15 years before they are sold, and every year 25-30 million real Christmas trees are sold in the United States."
+        ];
+
+        let currentTriviaIndex = 0;
+        let events = {};
+        let wishLists = {};
+        let accommodations = {};
+        let currentEditEvent = null;
+
+        function initSnowflakes() {
+            const container = document.getElementById('snowflakes');
+            const snowflakeSymbols = ['❄', '❅', '❆'];
+
+            for (let i = 0; i < 15; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.top = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                snowflake.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(snowflake);
+            }
+        }
+
+        function updateCountdown() {
+            const christmas = new Date('2025-12-25T00:00:00');
+            const now = new Date();
+            const diff = christmas - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+            } else {
+                document.getElementById('countdown').innerHTML = '<div style="font-size: 1.5em; color: #3d5a3d;">🎄 Merry Christmas! 🎄</div>';
+            }
+        }
+
+        async function fetchWeather() {
+            try {
+                // Using wttr.in - a free weather API that doesn't require an API key
+                const response = await fetch('https://wttr.in/Austin,TX?format=j1');
+                const data = await response.json();
+                
+                const currentTemp = data.current_condition[0];
+                const tempF = currentTemp.temp_F;
+                const condition = currentTemp.weatherDesc[0].value;
+                
+                document.getElementById('weatherTemp').textContent = `${tempF}°F`;
+                document.getElementById('weatherCondition').textContent = condition;
+            } catch (error) {
+                console.error('Error fetching weather:', error);
+                document.getElementById('weatherTemp').textContent = '--°F';
+                document.getElementById('weatherCondition').textContent = 'Unable to load weather';
+            }
+        }
+
+        function rotateTriviaFacts() {
+            document.getElementById('trivia').textContent = triviaFacts[currentTriviaIndex];
+            currentTriviaIndex = (currentTriviaIndex + 1) % triviaFacts.length;
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            event.target.classList.add('active');
+            document.getElementById(tabName + '-tab').classList.add('active');
+        }
+
+        function renderCalendar() {
+            const calendar = document.getElementById('calendar');
+            calendar.innerHTML = '';
+
+            const dates = [
+                { date: '2025-12-23', day: 'Tuesday' },
+                { date: '2025-12-24', day: 'Wednesday' },
+                { date: '2025-12-25', day: 'Thursday' },
+                { date: '2025-12-26', day: 'Friday' },
+                { date: '2025-12-27', day: 'Saturday' },
+                { date: '2025-12-28', day: 'Sunday' },
+                { date: '2025-12-29', day: 'Monday' }
+            ];
+
+            dates.forEach(({ date, day }) => {
+                const card = document.createElement('div');
+                card.className = 'day-card';
+
+                const dayEvents = events[date] || [];
+                
+                // Sort events by start time
+                const sortedEvents = [...dayEvents].sort((a, b) => {
+                    // If no start time, put at the end
+                    if (!a.startTime && !b.startTime) return 0;
+                    if (!a.startTime) return 1;
+                    if (!b.startTime) return -1;
+                    
+                    // Compare times (format is HH:MM)
+                    return a.startTime.localeCompare(b.startTime);
+                });
+                
+                const eventsHTML = sortedEvents.map((event, index) => {
+                    // Find original index for editing
+                    const originalIndex = dayEvents.indexOf(event);
+                    return `
+                        <div class="event-item ${event.category}" onclick="editEvent('${date}', ${originalIndex})">
+                            <div class="event-title">${event.title}</div>
+                            <div class="event-time">${event.startTime}${event.endTime ? ' - ' + event.endTime : ''}</div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Extract day number from date string (YYYY-MM-DD format)
+                const dayNumber = parseInt(date.split('-')[2]);
+
+                card.innerHTML = `
+                    <div class="day-header">
+                        <div class="day-date">${dayNumber}</div>
+                        <div class="day-name">${day}</div>
+                    </div>
+                    <div class="event-list">${eventsHTML}</div>
+                    <button class="btn btn-primary" onclick="addEvent('${date}')">+ Add Event</button>
+                `;
+
+                calendar.appendChild(card);
+            });
+        }
+
+        function addEvent(date) {
+            currentEditEvent = null;
+            document.getElementById('modalTitle').textContent = 'Add Event';
+            document.getElementById('deleteBtn').style.display = 'none';
+
+            document.getElementById('eventTitle').value = '';
+            document.getElementById('eventCategory').value = 'activities';
+            document.getElementById('eventDate').value = date;
+            document.getElementById('eventStartTime').value = '';
+            document.getElementById('eventEndTime').value = '';
+            document.getElementById('eventNotes').value = '';
+
+            document.querySelectorAll('#attendeesList input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+            document.getElementById('eventModal').classList.add('active');
+        }
+
+        function editEvent(date, index) {
+            currentEditEvent = { date, index };
+            const event = events[date][index];
+
+            document.getElementById('modalTitle').textContent = 'Edit Event';
+            document.getElementById('deleteBtn').style.display = 'inline-block';
+
+            document.getElementById('eventTitle').value = event.title;
+            document.getElementById('eventCategory').value = event.category;
+            document.getElementById('eventDate').value = date;
+            document.getElementById('eventStartTime').value = event.startTime;
+            document.getElementById('eventEndTime').value = event.endTime || '';
+            document.getElementById('eventNotes').value = event.notes || '';
+
+            document.querySelectorAll('#attendeesList input[type="checkbox"]').forEach(cb => {
+                cb.checked = event.attendees.includes(cb.value);
+            });
+
+            document.getElementById('eventModal').classList.add('active');
+        }
+
+        function saveEvent() {
+            const title = document.getElementById('eventTitle').value.trim();
+            if (!title) {
+                alert('Please enter an event title');
+                return;
+            }
+
+            const date = document.getElementById('eventDate').value;
+            const category = document.getElementById('eventCategory').value;
+            const startTime = document.getElementById('eventStartTime').value;
+            const endTime = document.getElementById('eventEndTime').value;
+            const notes = document.getElementById('eventNotes').value.trim();
+
+            const attendees = Array.from(document.querySelectorAll('#attendeesList input[type="checkbox"]:checked'))
+                .map(cb => cb.value);
+
+            const eventData = {
+                title,
+                category,
+                startTime,
+                endTime,
+                attendees,
+                notes
+            };
+
+            if (!events[date]) {
+                events[date] = [];
+            }
+
+            if (currentEditEvent) {
+                events[currentEditEvent.date][currentEditEvent.index] = eventData;
+            } else {
+                events[date].push(eventData);
+            }
+
+            saveToLocalStorage();
+            renderCalendar();
+            closeModal();
+        }
+
+        function deleteEvent() {
+            if (currentEditEvent && confirm('Are you sure you want to delete this event?')) {
+                events[currentEditEvent.date].splice(currentEditEvent.index, 1);
+                saveToLocalStorage();
+                renderCalendar();
+                closeModal();
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('eventModal').classList.remove('active');
+        }
+
+        function toggleAllAttendees(checked) {
+            document.querySelectorAll('.attendee-item').forEach(cb => {
+                cb.checked = checked;
+            });
+        }
+
+        function loadWishList() {
+            const person = document.getElementById('wishListPerson').value;
+            const content = document.getElementById('wishListContent');
+
+            if (!person) {
+                content.style.display = 'none';
+                return;
+            }
+
+            content.style.display = 'block';
+
+            if (!wishLists[person]) {
+                wishLists[person] = [];
+            }
+
+            // Display clothing sizes
+            displayClothingSizes(person);
+
+            const itemsContainer = document.getElementById('wishListItems');
+            itemsContainer.innerHTML = wishLists[person].map((gift, index) => `
+                <div class="wish-item">
+                    <div class="wish-item-title">${gift.title}</div>
+                    ${gift.link ? `<a href="${gift.link}" target="_blank" class="wish-item-link">🔗 View Link</a>` : ''}
+                    ${gift.details ? `<div style="color: #666; margin-top: 5px;">${gift.details}</div>` : ''}
+                    <div style="margin-top: 10px; display: flex; gap: 8px;">
+                        <button class="btn btn-secondary" style="padding: 5px 15px; font-size: 0.9em;" onclick="editGift(${index})">Edit</button>
+                        <button class="btn btn-danger" style="padding: 5px 15px; font-size: 0.9em;" onclick="deleteGift(${index})">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('giftTitle').value = '';
+            document.getElementById('giftLink').value = '';
+            document.getElementById('giftDetails').value = '';
+            document.getElementById('editGiftIndex').value = '';
+            document.getElementById('addGiftBtn').textContent = 'Add Gift';
+            
+            // Render the grouped wish lists
+            renderGroupedWishLists();
+        }
+
+        function displayClothingSizes(person) {
+            const sizeDisplay = document.getElementById('clothingSizeDisplay');
+            const sizes = clothingSizes[person];
+
+            if (!sizes || (!sizes.shirt && !sizes.pants && !sizes.shoes)) {
+                sizeDisplay.innerHTML = '<div style="color: #999; font-style: italic;">No clothing sizes added yet.</div>';
+            } else {
+                let html = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">';
+                if (sizes.shirt) html += `<div><strong>Shirt:</strong> ${sizes.shirt}</div>`;
+                if (sizes.pants) html += `<div><strong>Pants:</strong> ${sizes.pants}</div>`;
+                if (sizes.shoes) html += `<div><strong>Shoes:</strong> ${sizes.shoes}</div>`;
+                html += '</div>';
+                sizeDisplay.innerHTML = html;
+            }
+        }
+
+        function editClothingSizes() {
+            const person = document.getElementById('wishListPerson').value;
+            if (!person) return;
+
+            const sizes = clothingSizes[person] || { shirt: '', pants: '', shoes: '' };
+
+            const shirt = prompt(`Enter shirt size for ${person}:`, sizes.shirt || '');
+            const pants = prompt(`Enter pants size for ${person}:`, sizes.pants || '');
+            const shoes = prompt(`Enter shoe size for ${person}:`, sizes.shoes || '');
+
+            if (shirt !== null || pants !== null || shoes !== null) {
+                clothingSizes[person] = {
+                    shirt: shirt || sizes.shirt || '',
+                    pants: pants || sizes.pants || '',
+                    shoes: shoes || sizes.shoes || ''
+                };
+                
+                saveToLocalStorage();
+                displayClothingSizes(person);
+                renderGroupedWishLists();
+            }
+        }
+
+        function renderGroupedWishLists() {
+            const groupedContainer = document.getElementById('groupedWishLists');
+            
+            // Filter people who have at least one gift idea
+            const peopleWithGifts = familyMembers.filter(person => 
+                wishLists[person] && wishLists[person].length > 0
+            );
+            
+            if (peopleWithGifts.length === 0) {
+                groupedContainer.innerHTML = '<p style="text-align: center; color: #999; padding: 40px;">No gift ideas added yet.</p>';
+                return;
+            }
+            
+            let html = '';
+            
+            peopleWithGifts.forEach(person => {
+                const gifts = wishLists[person];
+                const sizes = clothingSizes[person];
+                
+                html += `
+                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                        <h3 style="color: #3d5a3d; margin-bottom: 15px; font-size: 1.3em; border-bottom: 2px solid #6B8B6B; padding-bottom: 10px;">
+                            🎁 ${person}'s Wish List
+                        </h3>`;
+                
+                // Display clothing sizes if available
+                if (sizes && (sizes.shirt || sizes.pants || sizes.shoes)) {
+                    html += `<div style="background: #f5f0eb; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9em;">`;
+                    html += `<strong style="color: #6B8B6B;">👕 Sizes:</strong> `;
+                    let sizeInfo = [];
+                    if (sizes.shirt) sizeInfo.push(`Shirt: ${sizes.shirt}`);
+                    if (sizes.pants) sizeInfo.push(`Pants: ${sizes.pants}`);
+                    if (sizes.shoes) sizeInfo.push(`Shoes: ${sizes.shoes}`);
+                    html += sizeInfo.join(' • ');
+                    html += `</div>`;
+                }
+                
+                html += gifts.map((gift, index) => `
+                    <div class="wish-item" style="margin-bottom: 12px;">
+                        <div class="wish-item-title">${gift.title}</div>
+                        ${gift.link ? `<a href="${gift.link}" target="_blank" class="wish-item-link">🔗 View Link</a>` : ''}
+                        ${gift.details ? `<div style="color: #666; margin-top: 5px; font-size: 0.9em;">${gift.details}</div>` : ''}
+                        <div style="margin-top: 8px;">
+                            <button class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.85em;" onclick="editGiftFromGrouped('${person}', ${index})">Edit</button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                html += `</div>`;
+            });
+            
+            groupedContainer.innerHTML = html;
+        }
+
+        function editGift(index) {
+            const person = document.getElementById('wishListPerson').value;
+            const gift = wishLists[person][index];
+            
+            document.getElementById('giftTitle').value = gift.title;
+            document.getElementById('giftLink').value = gift.link || '';
+            document.getElementById('giftDetails').value = gift.details || '';
+            document.getElementById('editGiftIndex').value = index;
+            document.getElementById('addGiftBtn').textContent = 'Update Gift';
+            
+            // Scroll to the form
+            document.getElementById('giftTitle').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            document.getElementById('giftTitle').focus();
+        }
+
+        function editGiftFromGrouped(person, index) {
+            // Set the person dropdown
+            document.getElementById('wishListPerson').value = person;
+            loadWishList();
+            
+            // Then edit the gift
+            setTimeout(() => {
+                editGift(index);
+            }, 100);
+        }
+
+        function addGift() {
+            const person = document.getElementById('wishListPerson').value;
+            const title = document.getElementById('giftTitle').value.trim();
+
+            if (!title) {
+                alert('Please enter a gift title');
+                return;
+            }
+
+            const gift = {
+                title,
+                link: document.getElementById('giftLink').value.trim(),
+                details: document.getElementById('giftDetails').value.trim()
+            };
+
+            const editIndex = document.getElementById('editGiftIndex').value;
+            
+            if (editIndex !== '') {
+                // Update existing gift
+                wishLists[person][parseInt(editIndex)] = gift;
+            } else {
+                // Add new gift
+                wishLists[person].push(gift);
+            }
+            
+            saveToLocalStorage();
+            loadWishList();
+        }
+
+        function deleteGift(index) {
+            const person = document.getElementById('wishListPerson').value;
+            if (confirm('Are you sure you want to remove this gift?')) {
+                wishLists[person].splice(index, 1);
+                saveToLocalStorage();
+                loadWishList();
+            }
+        }
+
+        function renderAccommodations() {
+            const container = document.getElementById('accommodations');
+            const nights = [
+                { date: 'December 23', key: '2025-12-23' },
+                { date: 'December 24', key: '2025-12-24' },
+                { date: 'December 25', key: '2025-12-25' },
+                { date: 'December 26', key: '2025-12-26' },
+                { date: 'December 27', key: '2025-12-27' },
+                { date: 'December 28', key: '2025-12-28' }
+            ];
+
+            const groups = [
+                'Gail & Bob',
+                'Becky, Evan & Liam',
+                'Bill & Stacy'
+            ];
+
+            const locations = [
+                'Chateau Gotimer',
+                'McColl-Stanton Manor'
+            ];
+
+            // Initialize accommodations structure
+            nights.forEach(night => {
+                if (!accommodations[night.key]) {
+                    accommodations[night.key] = {
+                        'Chateau Gotimer': [],
+                        'McColl-Stanton Manor': []
+                    };
+                }
+            });
+
+            // Build summary view
+            let summaryHTML = '<div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">';
+            summaryHTML += '<h2 style="color: #3d5a3d; margin-bottom: 20px; border-bottom: 2px solid #6B8B6B; padding-bottom: 10px;">📋 Accommodation Summary</h2>';
+            
+            summaryHTML += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">';
+            
+            locations.forEach(location => {
+                summaryHTML += `<div style="background: #f5f0eb; padding: 15px; border-radius: 8px; border-left: 4px solid #6B8B6B;">`;
+                summaryHTML += `<h3 style="color: #3d5a3d; margin-bottom: 15px; font-size: 1.2em;">🏠 ${location}</h3>`;
+                
+                nights.forEach(night => {
+                    const nightGroups = accommodations[night.key][location] || [];
+                    if (nightGroups.length > 0) {
+                        summaryHTML += `<div style="margin-bottom: 10px; padding: 8px; background: white; border-radius: 5px;">`;
+                        summaryHTML += `<div style="font-weight: 600; color: #6B8B6B; font-size: 0.9em; margin-bottom: 5px;">${night.date}</div>`;
+                        summaryHTML += `<div style="color: #666; font-size: 0.95em;">${nightGroups.join(', ')}</div>`;
+                        summaryHTML += `</div>`;
+                    }
+                });
+                
+                summaryHTML += `</div>`;
+            });
+            
+            summaryHTML += '</div></div>';
+
+            // Build detailed nightly view
+            let detailHTML = '<div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">';
+            detailHTML += '<h2 style="color: #3d5a3d; margin-bottom: 20px; border-bottom: 2px solid #6B8B6B; padding-bottom: 10px;">🗓️ Nightly Assignments</h2>';
+
+            nights.forEach(night => {
+                detailHTML += `
+                    <div class="night-card" style="margin-bottom: 20px;">
+                        <div class="night-header">Night of ${night.date}</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 15px;">
+                            ${locations.map(location => {
+                                const selectedGroups = accommodations[night.key][location] || [];
+                                return `
+                                    <div class="location-group">
+                                        <div class="location-name">${location}</div>
+                                        ${groups.map(group => {
+                                            const isChecked = selectedGroups.includes(group);
+                                            return `
+                                                <label style="display: flex; align-items: center; gap: 8px; margin: 8px 0; cursor: pointer;">
+                                                    <input type="checkbox" 
+                                                        ${isChecked ? 'checked' : ''}
+                                                        onchange="updateAccommodation('${night.key}', '${location}', '${group}', this.checked)"
+                                                        style="cursor: pointer;">
+                                                    <span style="font-size: 0.95em;">${group}</span>
+                                                </label>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+
+            detailHTML += '</div>';
+
+            container.innerHTML = summaryHTML + detailHTML;
+        }
+
+        function updateAccommodation(night, location, group, isChecked) {
+            if (!accommodations[night]) {
+                accommodations[night] = {
+                    'Chateau Gotimer': [],
+                    'McColl-Stanton Manor': []
+                };
+            }
+
+            if (!accommodations[night][location]) {
+                accommodations[night][location] = [];
+            }
+
+            if (isChecked) {
+                // Add group to this location
+                if (!accommodations[night][location].includes(group)) {
+                    accommodations[night][location].push(group);
+                }
+                // Remove from other location
+                const otherLocation = location === 'Chateau Gotimer' ? 'McColl-Stanton Manor' : 'Chateau Gotimer';
+                accommodations[night][otherLocation] = accommodations[night][otherLocation].filter(g => g !== group);
+            } else {
+                // Remove group from this location
+                accommodations[night][location] = accommodations[night][location].filter(g => g !== group);
+            }
+
+            saveToLocalStorage();
+            renderAccommodations();
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem('gotimer-events', JSON.stringify(events));
+            localStorage.setItem('gotimer-wishlists', JSON.stringify(wishLists));
+            localStorage.setItem('gotimer-accommodations', JSON.stringify(accommodations));
+            localStorage.setItem('gotimer-clothing-sizes', JSON.stringify(clothingSizes));
+        }
+
+        function loadFromLocalStorage() {
+            const savedEvents = localStorage.getItem('gotimer-events');
+            const savedWishLists = localStorage.getItem('gotimer-wishlists');
+            const savedAccommodations = localStorage.getItem('gotimer-accommodations');
+            const savedClothingSizes = localStorage.getItem('gotimer-clothing-sizes');
+
+            if (savedEvents) events = JSON.parse(savedEvents);
+            if (savedWishLists) wishLists = JSON.parse(savedWishLists);
+            if (savedClothingSizes) clothingSizes = JSON.parse(savedClothingSizes);
+            if (savedAccommodations) {
+                const loaded = JSON.parse(savedAccommodations);
+                // Migrate old format to new format if needed
+                accommodations = {};
+                for (let night in loaded) {
+                    accommodations[night] = {
+                        'Chateau Gotimer': [],
+                        'McColl-Stanton Manor': []
+                    };
+                    // If old format (string values), migrate to new format (arrays)
+                    if (loaded[night]['Chateau Gotimer'] && typeof loaded[night]['Chateau Gotimer'] === 'string') {
+                        accommodations[night]['Chateau Gotimer'] = [loaded[night]['Chateau Gotimer']].filter(g => g);
+                    } else if (Array.isArray(loaded[night]['Chateau Gotimer'])) {
+                        accommodations[night]['Chateau Gotimer'] = loaded[night]['Chateau Gotimer'];
+                    }
+                    
+                    if (loaded[night]['McColl-Stanton Manor'] && typeof loaded[night]['McColl-Stanton Manor'] === 'string') {
+                        accommodations[night]['McColl-Stanton Manor'] = [loaded[night]['McColl-Stanton Manor']].filter(g => g);
+                    } else if (Array.isArray(loaded[night]['McColl-Stanton Manor'])) {
+                        accommodations[night]['McColl-Stanton Manor'] = loaded[night]['McColl-Stanton Manor'];
+                    }
+                    
+                    // Migrate "Stacey" to "Stacy" spelling
+                    ['Chateau Gotimer', 'McColl-Stanton Manor'].forEach(location => {
+                        accommodations[night][location] = accommodations[night][location].map(group => 
+                            group.replace('Bill & Stacey', 'Bill & Stacy')
+                        );
+                    });
+                }
+                // Save the migrated data
+                saveToLocalStorage();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initSnowflakes();
+            loadFromLocalStorage();
+            renderCalendar();
+            renderAccommodations();
+            renderGroupedWishLists();
+            rotateTriviaFacts();
+            updateCountdown();
+            fetchWeather();
+
+            setInterval(updateCountdown, 60000);
+            setInterval(rotateTriviaFacts, 10000);
+            setInterval(fetchWeather, 600000); // Update weather every 10 minutes
+        });
+
+        document.getElementById('eventModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
