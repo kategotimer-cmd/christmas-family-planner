@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Christmas 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #d9d2c7;
+            color: #333;
+            padding: 30px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .header-left h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 5px;
+        }
+        
+        .header-left .subtitle {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .header-right .countdown-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        
+        .countdown-inline {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+        
+        .countdown-inline .unit {
+            font-size: 0.5em;
+            color: #999;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>Family Christmas 2025</h1>
+            <div class="subtitle">December 23rd - 29th</div>
+        </div>
+        <div class="header-right">
+            <div class="countdown-label">Until Christmas</div>
+            <div class="countdown-inline">
+                <div><span id="days">0</span> <span class="unit">days</span></div>
+                <div><span id="hours">0</span> <span class="unit">hrs</span></div>
+                <div><span id="minutes">0</span> <span class="unit">min</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function updateCountdown() {
+            const christmas = new Date('2025-12-25T00:00:00');
+            const now = new Date();
+            const diff = christmas - now;
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+            }
+        }
+        setInterval(updateCountdown, 60000);
+        updateCountdown();
+    </script>
+</body>
+</html>

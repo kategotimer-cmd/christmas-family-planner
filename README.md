@@ -57,7 +57,7 @@ Then visit: `http://localhost:8000/christmas-family-planner.html`
 ## 🎨 Design
 
 - **Color Scheme**: Shades of green (forest green, sage, olive)
-- **Typography**: 
+- **Typography**:
   - Title: Elegant cursive font (Lucida Handwriting)
   - Body: Modern Inter font
 - **Responsive**: Works on desktop, tablet, and mobile devices
